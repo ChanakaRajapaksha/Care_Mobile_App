@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/gradient_background.xml" value="0.1" />
-        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_health_gadget.xml" value="0.25" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_health_gadget.xml" value="0.2" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/main_item.xml" value="0.25" />
       </map>
     </option>
   </component>

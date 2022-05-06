@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Care_Mobile_App</string>
     <string name="health_title">Health Accessories</string>
+    <string name="category">Category</string>
+    <string name="item_name">Item Name</string>
+    <string name="condition">Condition</string>
 </resources>
