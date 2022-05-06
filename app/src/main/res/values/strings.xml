@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Care_Mobile_App</string>
-    <string name="button_1">Local News</string>
-    <string name="button_2">foreign News</string>
-    <string name="button_3">corona news</string>
-    <string name="textView_1">care</string>
+    <string name="health_title">Health Accessories</string>
+    <string name="category">Category</string>
+    <string name="item_name">Item Name</string>
+    <string name="condition">Condition</string>
 </resources>
