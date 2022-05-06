@@ -3,4 +3,5 @@
     <string name="button_1">Local News</string>
     <string name="button_2">foreign News</string>
     <string name="button_3">corona news</string>
+    <string name="textView_1">care</string>
 </resources>
