@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "651208735061",
+    "firebase_url": "https://care-mobile-app-b1a19-default-rtdb.firebaseio.com",
+    "project_id": "care-mobile-app-b1a19",
+    "storage_bucket": "care-mobile-app-b1a19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651208735061:android:b16d83f48fe1a1a9d957dc",
+        "android_client_info": {
+          "package_name": "com.example.care_mobile_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651208735061-eu0ltdi629g3cr8u72aks6fga74l95bp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChVc5FGtP1Zz2xwvgGcmuSAZ8Sjo80jkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651208735061-eu0ltdi629g3cr8u72aks6fga74l95bp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
