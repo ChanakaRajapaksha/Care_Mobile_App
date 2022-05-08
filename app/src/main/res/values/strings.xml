@@ -60,6 +60,9 @@
     <string name="userdocviewrecyworking_hours">working hours</string>
     <string name="userdocviewrecycall">Call</string>
     <string name="userdocviewrecye_mail">E-mail</string>
+    <string name="todowelcome">TODO</string>
+    <string name="welcomecreate_an_account_and_start_a_healthy_life">Create an account and start a healthy life</string>
+    <string name="todo2welcome">TODO</string>
 
 
 </resources>
