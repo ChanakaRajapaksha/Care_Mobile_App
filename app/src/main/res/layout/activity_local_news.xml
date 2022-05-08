@@ -9,24 +9,24 @@
 
     <Button
         android:id="@+id/button_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
         android:text="@string/button_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="142dp"
+        android:layout_height="54dp"
         android:text="@string/button_2"
         app:layout_constraintStart_toEndOf="@+id/button_1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="55dp"
         android:text="@string/button_3"
         app:layout_constraintStart_toEndOf="@+id/button_2"
         app:layout_constraintTop_toTopOf="parent" />

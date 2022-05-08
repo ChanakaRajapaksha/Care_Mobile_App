@@ -12,6 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Care_Mobile_App">
         <activity
+            android:name=".Covid_News"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Foreign_News"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".home"
             android:exported="true">
             <intent-filter>

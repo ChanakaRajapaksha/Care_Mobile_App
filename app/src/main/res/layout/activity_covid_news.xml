@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Covid_News"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="380dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="How Covid-scarred Shanghai will finally exit lockdown"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="320dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/cn" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="374dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="So they've ordered a mass clean-up - an army of people disinfecting thousands of compounds and residential areas aiming to eradicate the virus.  Then China's financial capital will open up, but it will be gradual, tentative, cautious.  The brutal &quot;war&quot; against Omicron has left a scarred city. People as old as 100 were among those who tested positive and were taken to quarantine centres. There were very few exceptions.  In the five weeks that I've been locked down, unable to go any further than the gate at the end of my compound, it's Shanghai's most vulnerable who've suffered the most.  One man called Wu who was quarantined documented what he saw on Douyin (known as TikTok outside of China). &quot;We don't have enough medical resources now, they can't be treated in hospital like in normal days,&quot; he said."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
