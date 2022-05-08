@@ -14,10 +14,9 @@
         android:padding="15dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@mipmap/ic_launcher"
-            android:layout_centerVertical="true"
             android:id="@+id/item1"
             app:civ_border_width="4dp"
             app:civ_border_color="#000099"/>
@@ -54,6 +53,33 @@
             android:layout_toEndOf="@id/item1"
             android:layout_below="@id/cat_text"
             android:layout_marginStart="20dp"/>
+
+        <LinearLayout
+
+            android:layout_below="@+id/con_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="#99ccff"
+                android:id="@+id/btnItemEdit"/>
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textAllCaps="false"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="#99ccff"
+                android:id="@+id/btnItemDelete"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
