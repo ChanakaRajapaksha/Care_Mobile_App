@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/item1"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#000099"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_text"
+            android:text="@string/item_name"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cat_text"
+            android:text="@string/category"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_below="@id/item_text"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/con_text"
+            android:text="@string/condition"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_below="@id/cat_text"
+            android:layout_marginStart="20dp"/>
+
+        <LinearLayout
+
+            android:layout_below="@+id/con_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="#99ccff"
+                android:id="@+id/btnItemEdit"/>
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textAllCaps="false"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="#99ccff"
+                android:id="@+id/btnItemDelete"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
