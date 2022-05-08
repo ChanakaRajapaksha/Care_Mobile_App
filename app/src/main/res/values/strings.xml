@@ -1,3 +1,65 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Care_Mobile_App</string>
+    <string name="care">Care</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="sign_up">Sign up</string>
+    <string name="caresignpic1" tools:ignore="Typos">caresignpic1</string>
+
+    <string name="cuserpassword">Password</string>
+    <string name="cuseremail">Email</string>
+    <string name="cuserforget_password">Forget Password ?</string>
+    <string name="cusercreate_new_account">Create new an account ?</string>
+    <string name="cusersign_in">SIGN IN</string>
+    <string name="cusersign_in_text">Sign In</string>
+    <string name="cuserconform_password">conform-Password</string>
+    <string name="cusersign_up_text">SIGN UP</string>
+    <string name="cuserbtnsign_up">sign up</string>
+    <string name="sign_up_text">Sign up</string>
+    <string name="get_startBTN">GET START</string>
+    <string name="cuseralready_have_an_account">Already have an account ?</string>
+
+    <string name="doctor_registrationtext">Doctor Registration</string>
+    <string name="doctregpic">doctregpic</string>
+    <string name="nameDocReg">Name</string>
+    <string name="speacializationdocReg">Specialization</string>
+    <string name="working_hospitaldocReg">Working Hospital</string>
+    <string name="channeling_centerDocReg">Channeling Center</string>
+    <string name="working_hoursDocReg">Working Hours</string>
+    <string name="passwordDocReg">Password</string>
+    <string name="contact_numberDocReg">Contact Number</string>
+    <string name="e_mailDocReg">E-mail</string>
+    <string name="insert_profile_pictureDocReg">Insert Profile Picture >>></string>
+    <string name="submitDocReg">Register Now</string>
+    <string name="click_here_gohomeactivity">click here go</string>
+
+    <string name="join_with_us_as_a_doctortxt">Join with us as a Doctor</string>
+    <string name="register_as_a_doctorjoinasdoc">REGISTER AS A DOCTOR</string>
+    <string name="if_you_already_have_an_account_log_injoinasdoc">If you already have an account, Log In</string>
+    <string name="namejoinlogin">Name</string>
+    <string name="passwordjoinlogin">Password</string>
+    <string name="loginjoinbtn">LOGIN</string>
+    <string name="namejoinwithlogin">Name</string>
+    <string name="already_have_a_doctor_accountdocreg">Already have a doctor account ?</string>
+    <string name="view_doctors_listuserview">view list of Doctors</string>
+    <string name="adminupdate">Update</string>
+    <string name="adminupdate_details">Update Details</string>
+    <string name="admin_view_list_of_doctors">Admin view list of Doctors</string>
+    <string name="admindocviewrecyname">Name</string>
+    <string name="admindocviewrecyspecialization">specialization</string>
+    <string name="admindocviewrecyhospital">Hospital</string>
+    <string name="admindocviewrecyworkplace">workplace</string>
+    <string name="admindocviewrecyworking_hours">working hours</string>
+    <string name="admindocviewrecycontact_number">Contact number</string>
+    <string name="admindocviewrecye_mail">E-mail</string>
+    <string name="admindocviewrecyedit">Edit</string>
+    <string name="admindocviewrecydelete">Delete</string>
+    <string name="userdocviewrecyname">Name</string>
+    <string name="userdocviewrecyspecialization">specialization</string>
+    <string name="userdocviewrecyhospital">Hospital</string>
+    <string name="userdocviewrecyworkplace">workplace</string>
+    <string name="userdocviewrecyworking_hours">working hours</string>
+    <string name="userdocviewrecycall">Call</string>
+    <string name="userdocviewrecye_mail">E-mail</string>
+
+
 </resources>

@@ -5,6 +5,27 @@
       <map>
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/gradient_background.xml" value="0.1" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.276" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable/gradient_background.xml" value="0.179" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.276" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable/ic_baseline_hourglass_top_24.xml" value="0.201" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.276" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.276" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable/input_usigin_bg.xml" value="0.1985" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/font/adamina.xml" value="0.215625" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/activity_care_admin_doc_viewl_recycler.xml" value="0.18" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/activity_care_sign_home.xml" value="0.2713541666666667" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/activity_care_user_doc_viewl_recycler.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/activity_care_users_sign_in.xml" value="0.33" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/activity_care_users_sign_up.xml" value="0.2713541666666667" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/activity_doctor_registration.xml" value="0.25" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/activity_join_as_adoctor.xml" value="0.2328125" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/careadmin_doc_update.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/careadmindocviewlrecycle_item.xml" value="0.21" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/layout/careuserdocviewlrecycle_item.xml" value="0.2" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/menu/admin_search_doc.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/menu/user_search_doc.xml" value="0.22" />
         <entry key="..\:/Users/Rivishan/Desktop/titanium/app/src/main/res/layout/activity_main.xml" value="0.23177083333333334" />
       </map>
     </option>
