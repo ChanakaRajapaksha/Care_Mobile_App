@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "651208735061",
-    "project_id": "care-mobile-app-b1a19",
-    "storage_bucket": "care-mobile-app-b1a19.appspot.com"
+
+    "project_number": "217923667884",
+    "project_id": "care-mobile-app-bae45",
+    "storage_bucket": "care-mobile-app-bae45.appspot.com"
+
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:651208735061:android:b16d83f48fe1a1a9d957dc",
+
+        "mobilesdk_app_id": "1:217923667884:android:4625b70c1db2a1a84d1c09",
+
         "android_client_info": {
           "package_name": "com.example.care_mobile_app"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "651208735061-eu0ltdi629g3cr8u72aks6fga74l95bp.apps.googleusercontent.com",
+
+          "client_id": "217923667884-mj0pivqlbfci3d4o7fon9c2jviu6h8vi.apps.googleusercontent.com",
+
           "client_type": 3
         }
       ],
       "api_key": [
         {
+
           "current_key": "AIzaSyChVc5FGtP1Zz2xwvgGcmuSAZ8Sjo80jkY"
+
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "651208735061-eu0ltdi629g3cr8u72aks6fga74l95bp.apps.googleusercontent.com",
+
+              "client_id": "217923667884-mj0pivqlbfci3d4o7fon9c2jviu6h8vi.apps.googleusercontent.com",
+
               "client_type": 3
             }
           ]

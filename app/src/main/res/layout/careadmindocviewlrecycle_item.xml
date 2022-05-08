@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true"
+
+    android:background="@color/white"
+    android:backgroundTint="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/adminviewrvimg1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="51dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/adminviewrvnametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/adminviewrvimg1"
+            android:text="@string/admindocviewrecyname"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adminviewrvspecializationtext"
+            android:text="@string/admindocviewrecyspecialization"
+            android:textSize="20sp"
+
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/adminviewrvimg1"
+            android:layout_below="@id/adminviewrvnametext"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adminviewrvshospitaltext"
+            android:text="@string/admindocviewrecyhospital"
+            android:textSize="20sp"
+
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/adminviewrvimg1"
+            android:layout_below="@id/adminviewrvspecializationtext"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adminviewrvworkplacetext"
+            android:text="@string/admindocviewrecyworkplace"
+            android:textSize="20sp"
+
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/adminviewrvimg1"
+            android:layout_below="@id/adminviewrvshospitaltext"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adminviewrvwhourstext"
+            android:text="@string/admindocviewrecyworking_hours"
+            android:textSize="20sp"
+
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/adminviewrvimg1"
+            android:layout_below="@id/adminviewrvworkplacetext"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adminviewrvphonenumbertext"
+            android:text="@string/admindocviewrecycontact_number"
+            android:textSize="20sp"
+
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/adminviewrvimg1"
+            android:layout_below="@id/adminviewrvwhourstext"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/adminviewrvemailtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminviewrvphonenumbertext"
+            android:layout_marginStart="10dp"
+
+            android:layout_toEndOf="@id/adminviewrvimg1"
+            android:text="@string/admindocviewrecye_mail"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_below="@+id/adminviewrvemailtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/admindocviewrecyedit"
+                android:textAllCaps="false"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/adminbtnEdit"/>
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/admindocviewrecydelete"
+                android:textAllCaps="false"
+                android:layout_marginStart="5dp"
+                android:id="@+id/adminbtnDelete"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
