@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Care_Mobile_App</string>
+
     <string name="care">Care</string>
     <string name="create_an_account">Create an account</string>
     <string name="sign_up">Sign up</string>
@@ -60,6 +61,7 @@
     <string name="userdocviewrecyworking_hours">working hours</string>
     <string name="userdocviewrecycall">Call</string>
     <string name="userdocviewrecye_mail">E-mail</string>
+
 
 
 </resources>
