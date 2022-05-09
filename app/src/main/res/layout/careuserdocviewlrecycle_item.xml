@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true"
+
+    android:background="@color/white"
+    android:backgroundTint="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:padding="15dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/viewrvimg1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="9dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/viewrvnametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/viewrvimg1"
+            android:text="@string/userdocviewrecyname"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/viewrvspecializationtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewrvnametext"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/viewrvimg1"
+            android:text="@string/userdocviewrecyspecialization"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/viewrvshospitaltext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewrvspecializationtext"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/viewrvimg1"
+            android:text="@string/userdocviewrecyhospital"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/viewrvworkplacetext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewrvshospitaltext"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/viewrvimg1"
+            android:text="@string/userdocviewrecyworkplace"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/viewrvwhourstext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewrvworkplacetext"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/viewrvimg1"
+            android:text="@string/userdocviewrecyworking_hours"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+
+        <LinearLayout
+            android:layout_below="@+id/viewrvwhourstext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/userdocviewrecycall"
+                android:textAllCaps="false"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/userbtncall"/>
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/userdocviewrecye_mail"
+                android:textAllCaps="false"
+                android:layout_marginStart="5dp"
+                android:id="@+id/userbtnemail"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -4,6 +4,273 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".DoctorRegistrationActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-36dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/docregistration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="@string/doctor_registrationtext"
+                android:textAlignment="center"
+                android:textColor="#2196F3"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/docRegName"
+                android:layout_width="328dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:autofillHints=""
+                android:background="@drawable/input_usigin_bg"
+                android:drawableStart="@drawable/ic_baseline_person_pin_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/nameDocReg"
+                android:inputType="textPersonName"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.518"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/docregistration" />
+
+            <EditText
+                android:id="@+id/docRegspecial"
+                android:layout_width="328dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:autofillHints=""
+                android:background="@drawable/input_usigin_bg"
+                android:drawableStart="@drawable/ic_baseline_star_border_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/speacializationdocReg"
+                android:inputType="text"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/docRegName"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="@+id/docRegName"
+                app:layout_constraintTop_toBottomOf="@+id/docRegName" />
+
+            <EditText
+                android:id="@+id/docRegworkhos"
+                android:layout_width="332dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/input_usigin_bg"
+                android:drawableStart="@drawable/ic_baseline_local_hospital_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/working_hospitaldocReg"
+                android:inputType="text"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/docRegspecial"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@+id/docRegspecial"
+                app:layout_constraintTop_toBottomOf="@+id/docRegspecial" />
+
+            <EditText
+                android:id="@+id/docRegWokPlace"
+                android:layout_width="330dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/input_usigin_bg"
+                android:drawableStart="@drawable/ic_baseline_work_outline_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/channeling_centerDocReg"
+                android:inputType="text"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/docRegworkhos"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@+id/docRegworkhos"
+                app:layout_constraintTop_toBottomOf="@+id/docRegworkhos" />
+
+            <EditText
+                android:id="@+id/docRegWorkHours"
+                android:layout_width="328dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/input_usigin_bg"
+                android:drawableStart="@drawable/ic_baseline_hourglass_top_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/working_hoursDocReg"
+                android:inputType="text"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/docRegWokPlace"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@+id/docRegWokPlace"
+                app:layout_constraintTop_toBottomOf="@+id/docRegWokPlace" />
+
+
+            <EditText
+                android:id="@+id/docRegPassword"
+                android:layout_width="328dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/input_usigin_bg"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/passwordDocReg"
+                android:inputType="textPassword"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/docRegWorkHours"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/docRegWorkHours"
+                app:layout_constraintTop_toBottomOf="@+id/emailDocReg" />
+
+
+            <EditText
+                android:id="@+id/PhoneNumregDoc"
+                android:layout_width="330dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/input_usigin_bg"
+                android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/contact_numberDocReg"
+                android:inputType="phone"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/docRegWorkHours"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@+id/docRegWorkHours"
+                app:layout_constraintTop_toBottomOf="@+id/docRegWorkHours" />
+
+            <EditText
+                android:id="@+id/emailDocReg"
+                android:layout_width="328dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_usigin_bg"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/e_mailDocReg"
+                android:inputType="textEmailAddress"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/PhoneNumregDoc"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@+id/PhoneNumregDoc"
+                app:layout_constraintTop_toBottomOf="@+id/PhoneNumregDoc"
+                android:autofillHints="" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilepicdocreg"
+                android:layout_width="89dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/docregimages"
+                app:civ_border_color="#000000"
+                app:layout_constraintEnd_toEndOf="@+id/docRegPassword"
+                app:layout_constraintHorizontal_bias="0.932"
+                app:layout_constraintStart_toStartOf="@+id/docRegPassword"
+                app:layout_constraintTop_toBottomOf="@+id/docRegPassword" />
+
+            <TextView
+                android:id="@+id/insertpictext"
+                android:layout_width="205dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+
+                android:paddingStart="18dp"
+                android:paddingTop="9dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="13dp"
+                android:text="@string/insert_profile_pictureDocReg"
+                android:textAlignment="viewStart"
+                android:textColor="#0B0B0B"
+
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/docRegPassword"
+                app:layout_constraintTop_toBottomOf="@+id/docRegPassword" />
+
+            <Button
+                android:id="@+id/docRegbtnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="104dp"
+                android:text="@string/submitDocReg"
+                app:layout_constraintEnd_toEndOf="@+id/docRegPassword"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/docRegPassword"
+                app:layout_constraintTop_toBottomOf="@+id/docRegPassword" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

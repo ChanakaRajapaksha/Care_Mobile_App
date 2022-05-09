@@ -26,4 +26,13 @@
     <string name="update_post">Update Post</string>
     <string name="update">Update</string>
     <string name="view">View</string>
+    <string name="categories">Categories</string>
+    <string name="news">News</string>
+    <string name="read_latest_news">Read Latest News</string>
+    <string name="tips_amp_tricks"><![CDATA[Tips & Tricks]]></string>
+    <string name="try_tips_tricks"><![CDATA[Try Tips & Tricks]]></string>
+    <string name="health_zone">Health Zone</string>
+    <string name="choose_your_doctor">Choose Your Doctor</string>
+    <string name="health_gadget">Health Gadget</string>
+    <string name="select_your_best_item">Select your best item</string>
 </resources>

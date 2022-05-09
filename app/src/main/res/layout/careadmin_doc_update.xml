@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="@string/adminupdate_details"
+        android:background="#66c2ff"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/adminupdateD"/>
+
+    <EditText
+        android:id="@+id/adminupdocRegName"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginRight="35dp"
+        android:autofillHints=""
+        android:background="@drawable/input_usigin_bg"
+        android:drawableStart="@drawable/ic_baseline_person_pin_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/nameDocReg"
+        android:inputType="textPersonName"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/adminupdocRegspecial"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints=""
+        android:background="@drawable/input_usigin_bg"
+        android:drawableStart="@drawable/ic_baseline_star_border_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/speacializationdocReg"
+        android:inputType="text"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp" />
+
+    <EditText
+        android:id="@+id/adminupdocRegworkhos"
+        android:layout_width="332dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:background="@drawable/input_usigin_bg"
+        android:drawableStart="@drawable/ic_baseline_local_hospital_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/working_hospitaldocReg"
+        android:inputType="text"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp" />
+
+    <EditText
+        android:id="@+id/adminupdocRegWokPlace"
+        android:layout_width="330dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:background="@drawable/input_usigin_bg"
+        android:drawableStart="@drawable/ic_baseline_work_outline_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/channeling_centerDocReg"
+        android:inputType="text"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"/>
+
+    <EditText
+        android:id="@+id/adminupdocRegWorkHours"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:background="@drawable/input_usigin_bg"
+        android:drawableStart="@drawable/ic_baseline_hourglass_top_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/working_hoursDocReg"
+        android:inputType="text"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"/>
+
+
+
+
+    <EditText
+        android:id="@+id/adminupPhoneNumregDoc"
+        android:layout_width="330dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:background="@drawable/input_usigin_bg"
+        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/contact_numberDocReg"
+        android:inputType="phone"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp" />
+
+    <EditText
+        android:id="@+id/adminupemailDocReg"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_usigin_bg"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/e_mailDocReg"
+        android:inputType="textEmailAddress"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/adminbtnUpdateDocd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="80dp"
+        android:gravity="center"
+        android:text="@string/adminupdate"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
