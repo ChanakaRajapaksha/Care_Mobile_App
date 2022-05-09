@@ -2,6 +2,7 @@ package com.example.care_mobile_app;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,7 @@ public class ItemAdapter extends FirebaseRecyclerAdapter<ItemModel,ItemAdapter.m
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull ItemModel model) {
+    protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull ItemModel model) {
         holder.title.setText(model.getTitle());
         holder.category.setText(model.getCategory());
         holder.con.setText(model.getCon());
@@ -112,11 +113,37 @@ public class ItemAdapter extends FirebaseRecyclerAdapter<ItemModel,ItemAdapter.m
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
                                         Toast.makeText(holder.title.getContext(), "Error while Updating", Toast.LENGTH_SHORT).show();
+                                        dialogPlus.dismiss();
                                     }
                                 });
                     }
                 });
 
+            }
+        });
+
+        holder.btnItmDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(holder.title.getContext());
+                builder.setTitle("Are you sure delete item ad?");
+                builder.setMessage("Deleted item can't be undo");
+
+                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        FirebaseDatabase.getInstance().getReference().child("item")
+                                .child(getRef(position).getKey()).removeValue();
+                        Toast.makeText(holder.title.getContext(), "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(holder.title.getContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.show();
             }
         });
 
@@ -129,14 +156,14 @@ public class ItemAdapter extends FirebaseRecyclerAdapter<ItemModel,ItemAdapter.m
         return new myViewHolder(view);
     }
 
-    class myViewHolder extends RecyclerView.ViewHolder {
+    static class myViewHolder extends RecyclerView.ViewHolder {
 
         CircleImageView img;
         TextView title,category,con;
 
         Button btnItemEdit, btnItmDelete;
 
-        public myViewHolder(@NonNull View itemView) {
+        public myViewHolder(View itemView) {
             super(itemView);
             img = (CircleImageView)itemView.findViewById(R.id.item1);
             title = (TextView)itemView.findViewById(R.id.item_text);

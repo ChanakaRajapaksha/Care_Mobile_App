@@ -63,22 +63,15 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnView"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:text="@string/edit"
-                android:textAllCaps="false"
-                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:layout_marginLeft="100dp"
                 android:backgroundTint="#99ccff"
-                android:id="@+id/btnItemEdit"/>
+                android:text="@string/view"
+                android:textAllCaps="false" />
 
-            <Button
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:text="@string/delete"
-                android:textAllCaps="false"
-                android:layout_marginLeft="5dp"
-                android:backgroundTint="#99ccff"
-                android:id="@+id/btnItemDelete"/>
 
         </LinearLayout>
 

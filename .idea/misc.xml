@@ -6,17 +6,24 @@
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/add_item.xml" value="0.1" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/gradient_background.xml" value="0.1" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/ic_baseline_add_photo_alternate_24.xml" value="0.1" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/round.xml" value="0.1" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/search_icon.xml" value="0.1" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/font/font.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/font/font_style.xml" value="0.10925925925925926" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_add_item.xml" value="0.25" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_health_gadget.xml" value="0.2" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_local_news.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_update_delete_item.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_view_item.xml" value="0.25" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_welcome.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/item_update_popup.xml" value="0.25" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/list_district.xml" value="0.25" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/main_item.xml" value="0.25" />
+        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/view_item.xml" value="0.25" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/menu/search.xml" value="0.25" />
       </map>
     </option>
