@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
@@ -38,8 +39,8 @@ public class AddItemActivity extends AppCompatActivity {
     private Button postBtn,backBtn;
     private ImageView imageView;
     private ProgressBar progressBar;
-    private DatabaseReference root = FirebaseDatabase.getInstance().getReference().child("item");
-    private StorageReference reference= FirebaseStorage.getInstance().getReference();
+    private final DatabaseReference root = FirebaseDatabase.getInstance().getReference().child("item");
+    private final StorageReference reference= FirebaseStorage.getInstance().getReference();
     private Uri img;
     EditText des,name,number,price,title;
     AutoCompleteTextView category,con,district;
@@ -60,10 +61,30 @@ public class AddItemActivity extends AppCompatActivity {
     ArrayAdapter<String> adapterCategory;
     ArrayAdapter<String> adapterCondition;
 
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
+
+        category = (AutoCompleteTextView)findViewById(R.id.auto_complete_category);
+        con = (AutoCompleteTextView)findViewById(R.id.auto_complete_condition);
+        des = (EditText)findViewById(R.id.txtDescription);
+        district = (AutoCompleteTextView)findViewById(R.id.auto_complete_district);
+        name = (EditText)findViewById(R.id.txtName);
+        number = (EditText)findViewById(R.id.txtNumber);
+        price = (EditText)findViewById(R.id.txtPrice);
+        title = (EditText)findViewById(R.id.txtTitle);
+
+        backBtn = (Button)findViewById(R.id.btnBack);
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         autoCompleteDistrict = findViewById(R.id.auto_complete_district);
         autoCompleteCategory = findViewById(R.id.auto_complete_category);
         autoCompleteCondition = findViewById(R.id.auto_complete_condition);
@@ -126,16 +147,6 @@ public class AddItemActivity extends AppCompatActivity {
             }
         });
 
-        category = (AutoCompleteTextView)findViewById(R.id.auto_complete_category);
-        con = (AutoCompleteTextView)findViewById(R.id.auto_complete_condition);
-        des = (EditText)findViewById(R.id.txtDescription);
-        district = (AutoCompleteTextView)findViewById(R.id.auto_complete_district);
-        name = (EditText)findViewById(R.id.txtName);
-        number = (EditText)findViewById(R.id.txtNumber);
-        price = (EditText)findViewById(R.id.txtPrice);
-        title = (EditText)findViewById(R.id.txtTitle);
-
-        backBtn = (Button)findViewById(R.id.btnBack);
     }
 
     @Override
@@ -158,9 +169,10 @@ public class AddItemActivity extends AppCompatActivity {
                     public void onSuccess(Uri uri) {
                         ItemModel itemModel = new ItemModel(uri.toString());
                         String item = root.push().getKey();
+                        assert item != null;
                         root.child(item).setValue(itemModel);
                         progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(AddItemActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddItemActivity.this, " Image Uploaded Successfully", Toast.LENGTH_SHORT).show();
                         imageView.setImageResource(R.drawable.ic_baseline_add_photo_alternate_24);
                     }
                 });

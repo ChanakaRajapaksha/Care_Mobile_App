@@ -9,11 +9,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.SearchView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HealthGadgetActivity extends AppCompatActivity {
 
@@ -27,7 +30,7 @@ public class HealthGadgetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_health_gadget);
 
         recyclerView = (RecyclerView)findViewById(R.id.recView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         FirebaseRecyclerOptions<ItemModel> options =
                 new FirebaseRecyclerOptions.Builder<ItemModel>()
@@ -44,6 +47,7 @@ public class HealthGadgetActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),AddItemActivity.class));
             }
         });
+
     }
 
     public HealthGadgetActivity() {
@@ -61,38 +65,5 @@ public class HealthGadgetActivity extends AppCompatActivity {
         super.onStop();
         itemAdapter.stopListening();
     }
-
-    /**@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search,menu);
-        MenuItem item = menu.findItem(R.id.);
-        SearchView searchView = (SearchView)item.getActionView();
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                itmSearch(query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String query) {
-                itmSearch(query);
-                return false;
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    private void itmSearch(String str) {
-        FirebaseRecyclerOptions<ItemModel> options =
-                new FirebaseRecyclerOptions.Builder<ItemModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("item").orderByChild("title").startAt(str).endAt(str+"~"),ItemModel.class)
-                        .build();
-
-        itemAdapter = new ItemAdapter(options);
-        itemAdapter.startListening();
-        recyclerView.setAdapter(itemAdapter);
-    }*/
 
 }
