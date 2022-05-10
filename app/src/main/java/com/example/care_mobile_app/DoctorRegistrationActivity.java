@@ -10,7 +10,6 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,7 +37,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DoctorRegistrationActivity extends AppCompatActivity {
 
-   TextView alreadyhaveaccRegDoc;
+
 
    private EditText docRegName,docRegspecial,docRegworkhos,docRegWokPlace,docRegWorkHours,PhoneNumregDoc,emailDocReg,docRegPassword;
    private Button docRegbtnSubmit;
@@ -184,7 +183,6 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
                                         finish();
-                                        return;
                                     }
                                 });
                                 uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
