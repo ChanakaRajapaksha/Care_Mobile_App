@@ -7,7 +7,7 @@
 
     <string name="cuserpassword">Password</string>
     <string name="cuseremail">Email</string>
-    <string name="cuserforget_password">Forget Password ?</string>
+    <string name="cuserforget_password">Forgot Password ?</string>
     <string name="cusercreate_new_account">Create new an account ?</string>
     <string name="cusersign_in">SIGN IN</string>
     <string name="cusersign_in_text">Sign In</string>

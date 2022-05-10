@@ -1,8 +1,11 @@
 package com.example.care_mobile_app;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,6 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -24,6 +29,7 @@ public class CareUsersSignInActivity extends AppCompatActivity {
 
     //initialize variables
     EditText inputEmail,inputPaasword;
+    TextView forgetpassword;
     Button btncuserlogin;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     ProgressDialog progressDialog;
@@ -43,12 +49,57 @@ public class CareUsersSignInActivity extends AppCompatActivity {
 
         inputEmail=findViewById(R.id.inputEmail);
         inputPaasword=findViewById(R.id.inputPaasword);
+        forgetpassword=findViewById(R.id.forgetpassword);
         btncuserlogin=findViewById(R.id.btncuserlogin);
+
         progressDialog=new ProgressDialog(this);
         mAuth=FirebaseAuth.getInstance();
         mUser=mAuth.getCurrentUser();
 
         createnewcuser.setOnClickListener(view -> startActivity(new Intent(CareUsersSignInActivity.this,CareUsersSignUpActivity.class)));
+
+        forgetpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText resetMail = new EditText(view.getContext());
+                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(view.getContext());
+                passwordResetDialog.setTitle("Forgot Password ?");
+                passwordResetDialog.setMessage("Enter Your Valid E-mail To Received Reset Link");
+                passwordResetDialog.setView(resetMail);
+
+                passwordResetDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //extract the email and send reset link
+
+                        String mail = resetMail.getText().toString();
+                        mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(CareUsersSignInActivity.this, "Reset Link Sent Successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(CareUsersSignInActivity.this, "Error!... E-mail is not valid", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                });
+
+                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //close the dialog
+                    }
+                });
+
+                passwordResetDialog.create().show();
+            }
+        });
+
+
+
 
         btncuserlogin.setOnClickListener(view -> perforLogin());
 
@@ -59,6 +110,7 @@ public class CareUsersSignInActivity extends AppCompatActivity {
 
         String email = inputEmail.getText().toString();
         String password = inputPaasword.getText().toString();
+
 
 
         if (!email.matches(emailPattern)) {
