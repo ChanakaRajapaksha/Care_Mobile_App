@@ -17,7 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Care_Mobile_App">
         <activity
-
             android:name=".CareAdminDocViewlRecyclerActivity"
             android:exported="false" />
         <activity
@@ -28,7 +27,6 @@
             android:exported="false" />
         <activity
             android:name=".CareUsersSignInActivity"
-
             android:exported="false" />
         <activity
             android:name=".DoctorRegistrationActivity"

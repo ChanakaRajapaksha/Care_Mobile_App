@@ -3,16 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/add_item.xml" value="0.1" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/gradient_background.xml" value="0.1" />
-        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/ic_baseline_add_photo_alternate_24.xml" value="0.1" />
-        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/round.xml" value="0.1" />
-        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/drawable/search_icon.xml" value="0.1" />
-        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_add_item.xml" value="0.25" />
-        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_health_gadget.xml" value="0.2" />
-        <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_local_news.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/RCP Rajapaksha/Desktop/Titanium/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
-
         <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.276" />
         <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable/gradient_background.xml" value="0.179" />
         <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.276" />
@@ -37,7 +29,6 @@
         <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/menu/admin_search_doc.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/Rivishan/Desktop/Care_Mobile_App/app/src/main/res/menu/user_search_doc.xml" value="0.22" />
         <entry key="..\:/Users/Rivishan/Desktop/titanium/app/src/main/res/layout/activity_main.xml" value="0.23177083333333334" />
-
       </map>
     </option>
   </component>

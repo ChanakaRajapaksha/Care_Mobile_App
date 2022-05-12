@@ -1,6 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Care_Mobile_App</string>
-
     <string name="care">Care</string>
     <string name="create_an_account">Create an account</string>
     <string name="sign_up">Sign up</string>
@@ -64,7 +63,6 @@
     <string name="todowelcome">TODO</string>
     <string name="welcomecreate_an_account_and_start_a_healthy_life">Create an account and start a healthy life</string>
     <string name="todo2welcome">TODO</string>
-
 
 
 </resources>
