@@ -3,11 +3,8 @@
     package="com.example.care_mobile_app">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS"/>
-
-
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Care_Mobile_App">
+        <activity
+            android:name=".Home"
+            android:exported="false" />
         <activity
             android:name=".CareAdminDocViewlRecyclerActivity"
             android:exported="false" />
@@ -40,9 +40,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
     </application>
 
 </manifest>

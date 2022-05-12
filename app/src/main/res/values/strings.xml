@@ -63,6 +63,15 @@
     <string name="todowelcome">TODO</string>
     <string name="welcomecreate_an_account_and_start_a_healthy_life">Create an account and start a healthy life</string>
     <string name="todo2welcome">TODO</string>
+    <string name="homepcategories">categories</string>
+    <string name="read_latest_news">read latest news</string>
+    <string name="tips_amp_tricks">tips and tricks</string>
+    <string name="try_tips_amp_tricks">try tips and tricks</string>
+    <string name="health_zone">health zone</string>
+    <string name="choose_your_doctor">choose your doctor</string>
+    <string name="health_gadget">health gadget</string>
+    <string name="select_your_best_item">select your best item</string>
+    <string name="homepnews">news</string>
 
 
 </resources>

@@ -133,10 +133,12 @@ public class CareUsersSignInActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             int udType = snapshot.getValue(Integer.class);
+                            //user sign in
                             if(udType == 0){
-                                Intent intent =  new Intent(CareUsersSignInActivity.this,CareUserDocViewlRecyclerActivity.class);
+                                Intent intent =  new Intent(CareUsersSignInActivity.this,Home.class);
                                 startActivity(intent);
                             }
+                            //admin sign in
                             if(udType == 1){
                                 Intent intent =  new Intent(CareUsersSignInActivity.this,CareAdminDocViewlRecyclerActivity.class);
                                 startActivity(intent);
