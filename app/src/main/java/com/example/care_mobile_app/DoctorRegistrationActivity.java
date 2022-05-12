@@ -70,7 +70,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
         profilepicdocreg = findViewById(R.id.profilepicdocreg);
 
 
-
+//select profile picture from device
         profilepicdocreg.setOnClickListener(view -> {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
@@ -80,6 +80,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
         loader = new ProgressDialog(this);
          mAuth = FirebaseAuth.getInstance();
 
+         //
         docRegbtnSubmit.setOnClickListener(view -> {
             final String name = docRegName.getText().toString().trim();
             final String specialization = docRegspecial.getText().toString().trim();
@@ -90,6 +91,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
             final String email = emailDocReg.getText().toString().trim();
             final String password = docRegPassword.getText().toString().trim();
 
+            //check all feilds empty
             if(TextUtils.isEmpty(name)){
                 docRegName.setError("Name is required!");
                 return;
@@ -121,6 +123,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                 docRegPassword.setError("Password is required!");
 
             }
+            //check profile picture
             if(resultUri == null){
                 Toast.makeText(DoctorRegistrationActivity.this, "Profile is required!",Toast.LENGTH_SHORT).show();
             }
@@ -219,17 +222,10 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                                 loader.dismiss();
 
                             }
-
-
-
                         }
                     }
                 });
-
             }
-
-
-
         });
 
     }
