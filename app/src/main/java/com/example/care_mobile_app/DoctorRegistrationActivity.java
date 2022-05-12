@@ -75,11 +75,8 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent,1);
-
-//            Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
-//            photoPickerIntent.setType("image/*");
-//            startActivityForResult(photoPickerIntent, SELECT_PHOTO);
         });
+
         loader = new ProgressDialog(this);
          mAuth = FirebaseAuth.getInstance();
 
@@ -165,6 +162,9 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                                     loader.dismiss();
                                 }
                             });
+
+                            // upload image registration....................................
+
                             if(resultUri !=null){
                                 final StorageReference filepath= FirebaseStorage.getInstance().getReference().child("profile picture").child(currentUserId);
                                 Bitmap bitmap = null;
@@ -235,12 +235,12 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode ==1 && resultCode == Activity.RESULT_OK && data!=null){
-            resultUri = data.getData();
-            profilepicdocreg.setImageURI(resultUri);
+        protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            if(requestCode ==1 && resultCode == Activity.RESULT_OK && data!=null){
+                resultUri = data.getData();
+                profilepicdocreg.setImageURI(resultUri);
 
-        }
+            }
     }
 }

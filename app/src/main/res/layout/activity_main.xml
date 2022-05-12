@@ -63,7 +63,7 @@
         android:id="@+id/imageViewwelcome"
         android:layout_width="128dp"
         android:layout_height="74dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="22dp"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"

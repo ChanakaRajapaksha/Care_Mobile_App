@@ -87,6 +87,8 @@ public class CareAdminDocViewlRecyclerActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+
+    // doctors search function(name)
     private void txtSearch(String str)
     {
         FirebaseRecyclerOptions<CareAdminDocViewlRecycleModel> options =

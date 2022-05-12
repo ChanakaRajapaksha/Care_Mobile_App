@@ -20,10 +20,11 @@ public class CareUserDocViewlRecyclerActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     CareUserDocViewlRecycleAdapter mainAdapter;
-    Button userbtncall;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_care_user_doc_viewl_recycler);
 
@@ -38,15 +39,6 @@ public class CareUserDocViewlRecyclerActivity extends AppCompatActivity {
         mainAdapter = new CareUserDocViewlRecycleAdapter(options);
         recyclerView.setAdapter(mainAdapter);
 
-//        userbtncall = findViewById(R.id.userbtncall);
-//        userbtncall.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Intent.ACTION_DIAL);
-//                intent.setData(Uri.parse("phonenumber"));
-//                startActivity(intent);
-//            }
-//        });
 
 
     }
