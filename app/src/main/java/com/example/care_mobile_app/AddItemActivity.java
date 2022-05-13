@@ -4,10 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
@@ -29,25 +33,28 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AddItemActivity extends AppCompatActivity {
+
+public class AddItemActivity<FirebaseAuth> extends AppCompatActivity {
 
     private Button postBtn,backBtn;
     private ImageView imageView;
     private ProgressBar progressBar;
-    private DatabaseReference root = FirebaseDatabase.getInstance().getReference().child("item");
-    private StorageReference reference= FirebaseStorage.getInstance().getReference();
-    private Uri img;
-    EditText des,name,number,price,title;
+    DatabaseReference databaseReference;
+    StorageReference storageReference;
+    Uri imgUri;
+    EditText des,name,number,price,title,img;
     AutoCompleteTextView category,con,district;
+    int Image_Request_code = 2;
 
     String[] dis = {"Colombo","Gampaha","Kalutara","Kandy","Matale","Nuwara Eliya","Galle",
-    "Matara","Hambantota","Jaffna","Kilinochchi","Mannar","Vavuniya","Mullaitivu","Batticaloa",
-    "Ampara","Trincomalee","Kurunegala","Puttalam","Anuradhapura","Polonnaruwa","Badulla","Moneragala",
-    "Ratnapura","Kegalle"};
+            "Matara","Hambantota","Jaffna","Kilinochchi","Mannar","Vavuniya","Mullaitivu","Batticaloa",
+            "Ampara","Trincomalee","Kurunegala","Puttalam","Anuradhapura","Polonnaruwa","Badulla","Moneragala",
+            "Ratnapura","Kegalle"};
 
     String[] cat= {"Health","Fitness"};
 
@@ -60,10 +67,22 @@ public class AddItemActivity extends AppCompatActivity {
     ArrayAdapter<String> adapterCategory;
     ArrayAdapter<String> adapterCondition;
 
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
+
+        category = (AutoCompleteTextView)findViewById(R.id.auto_complete_category);
+        con = (AutoCompleteTextView)findViewById(R.id.auto_complete_condition);
+        des = (EditText)findViewById(R.id.txtDescription);
+        district = (AutoCompleteTextView)findViewById(R.id.auto_complete_district);
+        name = (EditText)findViewById(R.id.txtName);
+        number = (EditText)findViewById(R.id.txtNumber);
+        price = (EditText)findViewById(R.id.txtPrice);
+        title = (EditText)findViewById(R.id.txtTitle);
+        img = (EditText)findViewById(R.id.txtImg);
+
         autoCompleteDistrict = findViewById(R.id.auto_complete_district);
         autoCompleteCategory = findViewById(R.id.auto_complete_category);
         autoCompleteCondition = findViewById(R.id.auto_complete_condition);
@@ -103,64 +122,62 @@ public class AddItemActivity extends AppCompatActivity {
 
         progressBar.setVisibility(View.INVISIBLE);
 
+        storageReference = FirebaseStorage.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference("image");
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent galleryIntent = new Intent();
                 galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
                 galleryIntent.setType("image/*");
-                startActivityForResult(galleryIntent, 2);
+                startActivityForResult(Intent.createChooser(galleryIntent, "Please Select Image"), Image_Request_code);
             }
         });
-        
+
+
         postBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 insertData();
                 clearAll();
-                if(img != null) {
-                    uploadToFirebase(img);
-                } else {
-                    Toast.makeText(AddItemActivity.this, "Please Select Image", Toast.LENGTH_SHORT).show();
-                }
+                uploadToFirebase();
             }
         });
 
-        category = (AutoCompleteTextView)findViewById(R.id.auto_complete_category);
-        con = (AutoCompleteTextView)findViewById(R.id.auto_complete_condition);
-        des = (EditText)findViewById(R.id.txtDescription);
-        district = (AutoCompleteTextView)findViewById(R.id.auto_complete_district);
-        name = (EditText)findViewById(R.id.txtName);
-        number = (EditText)findViewById(R.id.txtNumber);
-        price = (EditText)findViewById(R.id.txtPrice);
-        title = (EditText)findViewById(R.id.txtTitle);
-
-        backBtn = (Button)findViewById(R.id.btnBack);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == 2 && resultCode == RESULT_OK && data != null) {
-                img = data.getData();
-                imageView.setImageURI(img);
+        if(requestCode == Image_Request_code && resultCode == RESULT_OK && data != null) {
+            imgUri = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imgUri);
+                imageView.setImageBitmap(bitmap);
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
-    private void uploadToFirebase(Uri uri) {
-        StorageReference fileRef = reference.child(System.currentTimeMillis() + "." + getFileExtension(uri));
-        fileRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+    private void uploadToFirebase() {
+        StorageReference fileRef = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(imgUri));
+        fileRef.putFile(imgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
                         ItemModel itemModel = new ItemModel(uri.toString());
-                        String item = root.push().getKey();
-                        root.child(item).setValue(itemModel);
+                        String key = databaseReference.push().getKey();
+                        assert key != null;
+                        databaseReference.child(key).setValue(itemModel);
+                        Map newImage = new HashMap();
+                        newImage.put("img", imgUri);
                         progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(AddItemActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddItemActivity.this, " Image Uploaded Successfully", Toast.LENGTH_SHORT).show();
                         imageView.setImageResource(R.drawable.ic_baseline_add_photo_alternate_24);
                     }
                 });
@@ -174,7 +191,7 @@ public class AddItemActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 progressBar.setVisibility(View.INVISIBLE);
-                Toast.makeText(AddItemActivity.this, "Uploading Failed !!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddItemActivity.this, "Uploading Failed !", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -186,31 +203,35 @@ public class AddItemActivity extends AppCompatActivity {
     }
 
     private void insertData() {
-        Map<String,Object> map = new HashMap<>();
 
-        map.put("name",name.getText().toString());
-        map.put("title",title.getText().toString());
-        map.put("district",district.getText().toString());
-        map.put("number",number.getText().toString());
-        map.put("category",category.getText().toString());
-        map.put("price",price.getText().toString());
-        map.put("condition",con.getText().toString());
-        map.put("description",des.getText().toString());
+            Map<String, Object> map = new HashMap<>();
 
-        FirebaseDatabase.getInstance().getReference().child("item").push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(AddItemActivity.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(Exception e) {
-                        Toast.makeText(AddItemActivity.this, "Error while Insertion", Toast.LENGTH_SHORT).show();
-                    }
-                });
+            map.put("name", name.getText().toString());
+            map.put("title", title.getText().toString());
+            map.put("district", district.getText().toString());
+            map.put("number", number.getText().toString());
+            map.put("category", category.getText().toString());
+            map.put("price", price.getText().toString());
+            map.put("condition", con.getText().toString());
+            map.put("description", des.getText().toString());
+            map.put("img", img.getText().toString());
+
+
+            FirebaseDatabase.getInstance().getReference().child("item").push()
+                    .setValue(map)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(AddItemActivity.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(Exception e) {
+                            Toast.makeText(AddItemActivity.this, "Error while Insertion", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
     }
 
     private void clearAll() {
@@ -222,6 +243,7 @@ public class AddItemActivity extends AppCompatActivity {
         price.setText("");
         con.setText("");
         des.setText("");
+        img.setText("");
     }
 
 }

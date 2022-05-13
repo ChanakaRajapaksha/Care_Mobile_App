@@ -2,14 +2,14 @@ package com.example.care_mobile_app;
 
 public class ItemModel {
 
-    String title,category,con,img,des,district,name,number,price;
+    String title,category,con,img,des,district,name,number,price,imgUri;
 
     ItemModel()
     {
 
     }
 
-    public ItemModel(String title, String category, String con, String img, String des, String district, String name, String number, String price) {
+    public ItemModel(String title, String category, String con, String img, String des, String district, String name, String number, String price, String imgUri) {
         this.title = title;
         this.category = category;
         this.con = con;
@@ -19,6 +19,15 @@ public class ItemModel {
         this.name = name;
         this.number = number;
         this.price = price;
+        this.imgUri = imgUri;
+    }
+
+    public String getImgUri() {
+        return imgUri;
+    }
+
+    public void setImgUri(String imgUri) {
+        this.imgUri = imgUri;
     }
 
     public String getDes() {

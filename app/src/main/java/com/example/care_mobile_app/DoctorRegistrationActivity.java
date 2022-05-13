@@ -10,7 +10,6 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,17 +37,17 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DoctorRegistrationActivity extends AppCompatActivity {
 
-   TextView alreadyhaveaccRegDoc;
 
-   private EditText docRegName,docRegspecial,docRegworkhos,docRegWokPlace,docRegWorkHours,PhoneNumregDoc,emailDocReg,docRegPassword;
-   private Button docRegbtnSubmit;
-   private CircleImageView profilepicdocreg;
 
-   private Uri resultUri;
+    private EditText docRegName,docRegspecial,docRegworkhos,docRegWokPlace,docRegWorkHours,PhoneNumregDoc,emailDocReg,docRegPassword;
+    private Button docRegbtnSubmit;
+    private CircleImageView profilepicdocreg;
 
-   private FirebaseAuth mAuth;
-   private DatabaseReference userDatabaseRef;
-   private ProgressDialog loader;
+    private Uri resultUri;
+
+    private FirebaseAuth mAuth;
+    private DatabaseReference userDatabaseRef;
+    private ProgressDialog loader;
 
 
 
@@ -71,19 +70,17 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
         profilepicdocreg = findViewById(R.id.profilepicdocreg);
 
 
-
+//select profile picture from device
         profilepicdocreg.setOnClickListener(view -> {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent,1);
-
-//            Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
-//            photoPickerIntent.setType("image/*");
-//            startActivityForResult(photoPickerIntent, SELECT_PHOTO);
         });
-        loader = new ProgressDialog(this);
-         mAuth = FirebaseAuth.getInstance();
 
+        loader = new ProgressDialog(this);
+        mAuth = FirebaseAuth.getInstance();
+
+        //
         docRegbtnSubmit.setOnClickListener(view -> {
             final String name = docRegName.getText().toString().trim();
             final String specialization = docRegspecial.getText().toString().trim();
@@ -94,6 +91,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
             final String email = emailDocReg.getText().toString().trim();
             final String password = docRegPassword.getText().toString().trim();
 
+            //check all feilds empty
             if(TextUtils.isEmpty(name)){
                 docRegName.setError("Name is required!");
                 return;
@@ -125,6 +123,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                 docRegPassword.setError("Password is required!");
 
             }
+            //check profile picture
             if(resultUri == null){
                 Toast.makeText(DoctorRegistrationActivity.this, "Profile is required!",Toast.LENGTH_SHORT).show();
             }
@@ -166,6 +165,9 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                                     loader.dismiss();
                                 }
                             });
+
+                            // upload image registration....................................
+
                             if(resultUri !=null){
                                 final StorageReference filepath= FirebaseStorage.getInstance().getReference().child("profile picture").child(currentUserId);
                                 Bitmap bitmap = null;
@@ -184,7 +186,6 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
                                         finish();
-                                        return;
                                     }
                                 });
                                 uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -221,17 +222,10 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                                 loader.dismiss();
 
                             }
-
-
-
                         }
                     }
                 });
-
             }
-
-
-
         });
 
     }

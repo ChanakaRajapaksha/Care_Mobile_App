@@ -58,21 +58,5 @@
         app:layout_constraintTop_toBottomOf="@+id/tool_bar"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/recView"
-        app:layout_constraintHorizontal_bias="0.869"
-        app:layout_constraintStart_toStartOf="@+id/recView"
-        app:layout_constraintTop_toBottomOf="@+id/tool_bar"
-        app:layout_constraintVertical_bias="0.822"
-        android:backgroundTint="#005ce6"
-        app:srcCompat="@drawable/add_item"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:focusable="true"
-        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -68,11 +68,13 @@ class CareAdminDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<CareAdminD
                         .create();
                // dialogPlus.show();
 
+                //view to normal view as dialog
                 View view1 = dialogPlus.getHolderView();
                 EditText name = view1.findViewById(R.id.adminupdocRegName);
                 EditText specialization = view1.findViewById(R.id.adminupdocRegspecial);
                 EditText hospital = view1.findViewById(R.id.adminupdocRegworkhos);
-                EditText workplace = view1.findViewById(R.id.adminupdocRegWorkHours);
+                EditText workplace = view1.findViewById(R.id.adminupdocRegWokPlace);
+                EditText whours = view1.findViewById(R.id.adminupdocRegWorkHours);
                 EditText phonenumber = view1.findViewById(R.id.adminupPhoneNumregDoc);
                 EditText email = view1.findViewById(R.id.adminupemailDocReg);
 
@@ -82,6 +84,7 @@ class CareAdminDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<CareAdminD
                 specialization.setText(model.getSpecialization());
                 hospital.setText(model.getHospital());
                 workplace.setText(model.getWorkplace());
+                whours.setText(model.getWhours());
                 phonenumber.setText(model.getPhonenumber());
                 email.setText(model.getEmail());
 
@@ -95,6 +98,7 @@ class CareAdminDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<CareAdminD
                         map.put("specialization",specialization.getText().toString());
                         map.put("hospital",hospital.getText().toString());
                         map.put("workplace",workplace.getText().toString());
+                        map.put("whours",whours.getText().toString());
                         map.put("phonenumber",phonenumber.getText().toString());
                         map.put("email",email.getText().toString());
 
@@ -152,7 +156,7 @@ class CareAdminDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<CareAdminD
     @Override
     public adminViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.careadmindocviewlrecycle_item,parent,false);
-        return new CareAdminDocViewlRecycleAdapter.adminViewHolder(view);
+        return new adminViewHolder(view);
 
     }
 

@@ -144,52 +144,6 @@
                 android:gravity="center"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="22sp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/condition"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/editCondition"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/round"
-                android:gravity="center"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="22sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/description"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/editDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/round"
-                android:inputType="textMultiLine"
-                android:lines="6"
-                android:gravity="top"
-                android:overScrollMode="always"
-                android:scrollbars="vertical"
-                android:scrollbarStyle="insideInset"
-                android:scrollHorizontally="false"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <Button
                 android:layout_width="match_parent"

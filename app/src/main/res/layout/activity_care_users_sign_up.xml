@@ -164,7 +164,7 @@ tools:context=".CareUsersSignUpActivity">
             android:layout_width="399dp"
             android:layout_height="174dp"
             android:layout_marginBottom="4dp"
-            android:contentDescription="@string/caresignpic1"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/alreadyhaveaccount"
             app:layout_constraintHorizontal_bias="0.488"

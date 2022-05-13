@@ -20,16 +20,18 @@ public class CareUserDocViewlRecyclerActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     CareUserDocViewlRecycleAdapter mainAdapter;
-    Button userbtncall;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_care_user_doc_viewl_recycler);
 
         recyclerView = findViewById(R.id.rvuserview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        //fetch the data from firebase view recyle viiew
         FirebaseRecyclerOptions<CareUserDocViewlRecycleModel> options =
                 new FirebaseRecyclerOptions.Builder<CareUserDocViewlRecycleModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Doctors"), CareUserDocViewlRecycleModel.class)
@@ -38,32 +40,25 @@ public class CareUserDocViewlRecyclerActivity extends AppCompatActivity {
         mainAdapter = new CareUserDocViewlRecycleAdapter(options);
         recyclerView.setAdapter(mainAdapter);
 
-//        userbtncall = findViewById(R.id.userbtncall);
-//        userbtncall.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Intent.ACTION_DIAL);
-//                intent.setData(Uri.parse("phonenumber"));
-//                startActivity(intent);
-//            }
-//        });
 
 
     }
 
     @Override
+    //activity getting visible to user
     protected void onStart() {
         super.onStart();
         mainAdapter.startListening();
     }
 
     @Override
+    //stop
     protected void onStop() {
         super.onStop();
         mainAdapter.startListening();
     }
 
-    @Override
+    @Override//create option menu
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.user_search_doc,menu);
@@ -87,6 +82,7 @@ public class CareUserDocViewlRecyclerActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //search using speacialization
     private void txtSearch(String str)
     {
         FirebaseRecyclerOptions<CareUserDocViewlRecycleModel> options =

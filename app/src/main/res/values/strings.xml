@@ -1,14 +1,70 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">Care_Mobile_App</string>
-
+    <string name="health_title">Health Accessories</string>
+    <string name="category">Category</string>
+    <string name="item_name">Item Name</string>
+    <string name="condition">Condition</string>
+    <string name="search">Search</string>
+    <string name="health_accessories">Health Accessories</string>
+    <string name="todo">TODO</string>
+    <string name="post_your_ad_here">Post your ad here</string>
+    <string name="name">Name</string>
+    <string name="district">District</string>
+    <string name="images">Images</string>
+    <string name="upload">Upload</string>
+    <string name="post">Post</string>
+    <string name="description">Description</string>
+    <string name="select_district">Select District</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="select_category">Select Category</string>
+    <string name="price">Price</string>
+    <string name="select_condition">Select Condition</string>
+    <string name="back"><![CDATA[< Back]]></string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="update_post">Update Post</string>
+    <string name="update">Update</string>
+    <string name="view">View</string>
+    <string name="categories">Categories</string>
+    <string name="news">News</string>
+    <string name="read_latest_news">Read Latest News</string>
+    <string name="tips_amp_tricks"><![CDATA[Tips & Tricks]]></string>
+    <string name="health_zone">Health Zone</string>
+    <string name="choose_your_doctor">Choose Your Doctor</string>
+    <string name="select_your_best_item">Select Your Best Item</string>
+    <string name="health_gadget">Health Gadget</string>
+    <string name="try_tips_amp_tricks"><![CDATA[Try Tips & Tricks]]></string>
+    <string name="titanium">Titanium</string>
+    <string name="image_url">Image URL</string>
+    <string name="enter_item_name">Enter Item Name</string>
+    <string name="get_details">Get Details</string>
+    <string name="title">Title</string>
+    <string name="home">Home</string>
+    <string name="my_ads">My Ads</string>
+    <string name="join_as_a_doctor">Join As a Doctor</string>
+    <string name="contact">Contact</string>
+    <string name="logout">Logout</string>
     <string name="care">Care</string>
+    <string name="www_care_com">www.care.com</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="todo2welcome">todo2welcome</string>
+    <string name="welcomecreate_an_account_and_start_a_healthy_life">welcomecreate_an_account_and_start_a_healthy_life</string>
+    <string name="todowelcome">todowelcome</string>
+    <string name="create_an_account_and_start_a_healthy_life">Create an account and Start a healthy life</string>
+
+
+
+
+<!--    <string name="app_name">Care_Mobile_App</string>-->
+<!--    <string name="care">Care</string>-->
     <string name="create_an_account">Create an account</string>
     <string name="sign_up">Sign up</string>
-    <string name="caresignpic1" tools:ignore="Typos">caresignpic1</string>
+
 
     <string name="cuserpassword">Password</string>
     <string name="cuseremail">Email</string>
-    <string name="cuserforget_password">Forget Password ?</string>
+    <string name="cuserforget_password">Forgot Password ?</string>
     <string name="cusercreate_new_account">Create new an account ?</string>
     <string name="cusersign_in">SIGN IN</string>
     <string name="cusersign_in_text">Sign In</string>
@@ -61,9 +117,18 @@
     <string name="userdocviewrecyworking_hours">working hours</string>
     <string name="userdocviewrecycall">Call</string>
     <string name="userdocviewrecye_mail">E-mail</string>
-    <string name="todowelcome">TODO</string>
-    <string name="welcomecreate_an_account_and_start_a_healthy_life">Create an account and start a healthy life</string>
-    <string name="todo2welcome">TODO</string>
+<!--    <string name="todowelcome">TODO</string>-->
+<!--    <string name="welcomecreate_an_account_and_start_a_healthy_life">Create an account and start a healthy life</string>-->
+<!--    <string name="todo2welcome">TODO</string>-->
+<!--    <string name="homepcategories">categories</string>-->
+<!--    <string name="read_latest_news">read latest news</string>-->
+<!--    <string name="tips_amp_tricks">tips and tricks</string>-->
+<!--    <string name="try_tips_amp_tricks">try tips and tricks</string>-->
+<!--    <string name="health_zone">health zone</string>-->
+<!--    <string name="choose_your_doctor">choose your doctor</string>-->
+<!--    <string name="health_gadget">health gadget</string>-->
+<!--    <string name="select_your_best_item">select your best item</string>-->
+    <string name="homepnews">news</string>
 
 
 
