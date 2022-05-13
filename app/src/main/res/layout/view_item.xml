@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/item1"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#000099"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_text"
+            android:text="@string/item_name"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cat_text"
+            android:text="@string/category"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_below="@id/item_text"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/price_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cat_text"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/item1"
+            android:text="Price"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_below="@id/price_text"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/des_text"
+            android:text=""
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_below="@id/price_text"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/des_text"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/item1"
+            android:text="Name"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dis_text"
+            android:text="District"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_below="@id/name_text"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/number_text"
+            android:text="Contact Number"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@id/item1"
+            android:layout_below="@id/dis_text"
+            android:layout_marginStart="20dp"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

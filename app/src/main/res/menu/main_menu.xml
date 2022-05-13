@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+
+        <item
+            android:id="@+id/nav_ads"
+            android:title="@string/my_ads"
+            android:icon="@drawable/ic_baseline_content_paste_search_24"/>
+
+        <item
+            android:id="@+id/nav_doc"
+            android:title="@string/join_as_a_doctor"
+            android:icon="@drawable/ic_baseline_local_hospital"/>
+
+        <item
+            android:id="@+id/nav_contact"
+            android:title="@string/contact"
+            android:icon="@drawable/ic_baseline_contact_page"/>
+
+        <item
+            android:id="@+id/nav_log"
+            android:title="@string/logout"
+            android:icon="@drawable/ic_baseline_computer"/>
+
+
+    </group>
+</menu>
