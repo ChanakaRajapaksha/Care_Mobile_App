@@ -39,14 +39,12 @@ public class CareUserDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<Care
         holder.whours.setText(model.getWhours());
 
 
+        //E-mail button show to users
         holder.userbtnemail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String mail = model.getEmail();
-
                 Intent intent = new Intent(Intent.ACTION_SEND);
-
-
                 intent.setType("plan/text");
                 intent.putExtra(Intent.EXTRA_EMAIL,new String[] {mail});
                 intent.putExtra(Intent.EXTRA_SUBJECT, "");
@@ -56,9 +54,7 @@ public class CareUserDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<Care
         });
 
 
-
-
-        //call button
+        //call button show to users
          holder.userbtncall.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -70,7 +66,6 @@ public class CareUserDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<Care
                  view.getContext().startActivity(intent);
              }
          });
-
 
 
         //images retrive
@@ -96,7 +91,7 @@ public class CareUserDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<Care
         private static final int REQUEST_CALL=1;
         CircleImageView img;
         TextView name,specialization,hospital,workplace,whours,phonenumber,email;
-       public Button userbtncall,userbtnemail;
+        public Button userbtncall,userbtnemail;
 
         public userViewHolder(@NonNull View itemView) {
             super(itemView);

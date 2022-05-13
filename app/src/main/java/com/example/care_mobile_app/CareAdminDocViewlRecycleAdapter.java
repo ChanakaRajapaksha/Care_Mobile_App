@@ -68,6 +68,7 @@ class CareAdminDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<CareAdminD
                         .create();
                // dialogPlus.show();
 
+                //view to normal view as dialog
                 View view1 = dialogPlus.getHolderView();
                 EditText name = view1.findViewById(R.id.adminupdocRegName);
                 EditText specialization = view1.findViewById(R.id.adminupdocRegspecial);
