@@ -39,15 +39,15 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
 
 
 
-   private EditText docRegName,docRegspecial,docRegworkhos,docRegWokPlace,docRegWorkHours,PhoneNumregDoc,emailDocReg,docRegPassword;
-   private Button docRegbtnSubmit;
-   private CircleImageView profilepicdocreg;
+    private EditText docRegName,docRegspecial,docRegworkhos,docRegWokPlace,docRegWorkHours,PhoneNumregDoc,emailDocReg,docRegPassword;
+    private Button docRegbtnSubmit;
+    private CircleImageView profilepicdocreg;
 
-   private Uri resultUri;
+    private Uri resultUri;
 
-   private FirebaseAuth mAuth;
-   private DatabaseReference userDatabaseRef;
-   private ProgressDialog loader;
+    private FirebaseAuth mAuth;
+    private DatabaseReference userDatabaseRef;
+    private ProgressDialog loader;
 
 
 
@@ -78,9 +78,9 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
         });
 
         loader = new ProgressDialog(this);
-         mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
-         //
+        //
         docRegbtnSubmit.setOnClickListener(view -> {
             final String name = docRegName.getText().toString().trim();
             final String specialization = docRegspecial.getText().toString().trim();
@@ -231,12 +231,12 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
     }
 
     @Override
-        protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-            super.onActivityResult(requestCode, resultCode, data);
-            if(requestCode ==1 && resultCode == Activity.RESULT_OK && data!=null){
-                resultUri = data.getData();
-                profilepicdocreg.setImageURI(resultUri);
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode ==1 && resultCode == Activity.RESULT_OK && data!=null){
+            resultUri = data.getData();
+            profilepicdocreg.setImageURI(resultUri);
 
-            }
+        }
     }
 }

@@ -156,7 +156,7 @@ class CareAdminDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<CareAdminD
     @Override
     public adminViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.careadmindocviewlrecycle_item,parent,false);
-        return new CareAdminDocViewlRecycleAdapter.adminViewHolder(view);
+        return new adminViewHolder(view);
 
     }
 
