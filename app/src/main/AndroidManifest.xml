@@ -11,14 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Care_Mobile_App">
-
         <activity
-            android:name=".Welcome"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".SplashScreen"
+            android:name=".Home"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,51 +21,47 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Home"
-            android:exported="true">
-
-        </activity>
-        <activity
             android:name=".ViewItemActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".HealthGadgetActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".AddItemActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
-
-        <activity
-            android:name=".CareAdminDocViewlRecyclerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CareUserDocViewlRecyclerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CareUsersSignUpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CareUsersSignInActivity"
+            android:name=".TipsTricksActivity"
             android:exported="false" />
         <activity
             android:name=".DoctorRegistrationActivity"
             android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
