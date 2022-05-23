@@ -1,5 +1,11 @@
 package com.example.care_mobile_app;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,20 +13,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-
 import com.google.android.material.navigation.NavigationView;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //variables
-    Button itemBtn,BtnDocchoose;
+    Button itemBtn,BtnDocchoose,Logout;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -31,6 +29,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         setContentView(R.layout.activity_home);
 
 
+
+//        Logout = (Button)findViewById(R.id.Logout);
+//        Logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), Welcome.class));
+//            }
+//        });
 
 
         BtnDocchoose = (Button)findViewById(R.id.BtnDocchoose);
@@ -63,6 +69,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         navigationView.setNavigationItemSelectedListener(this);
 
         navigationView.setCheckedItem(R.id.nav_home);
+        navigationView.setCheckedItem(R.id.nav_log);
 
     }
 
@@ -84,6 +91,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 Intent intent = new Intent(Home.this,HealthGadgetActivity.class);
                 startActivity(intent);
                 break;
+
+            case R.id.nav_log:
+                    Intent intent1 = new Intent(Home.this,CareUsersSignInActivity.class);
+                startActivity(intent1);
+                break;
+
+
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

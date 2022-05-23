@@ -90,6 +90,7 @@ class CareAdminDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<CareAdminD
 
                 dialogPlus.show();
 
+                //update doctors detAILS.......................................................................
                 adminbtnUpdateDocd.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -122,7 +123,7 @@ class CareAdminDocViewlRecycleAdapter extends FirebaseRecyclerAdapter<CareAdminD
                 });
             }
         });
-
+//delete doctors details....................................................................................
         holder.adminbtnDelete.setOnClickListener(new View.OnClickListener() {
 
             @Override

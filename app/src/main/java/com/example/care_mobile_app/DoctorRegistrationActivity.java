@@ -142,7 +142,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                         else {
                             String currentUserId = mAuth.getCurrentUser().getUid();
                             userDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Doctors").child(currentUserId);
-                            HashMap userInfo = new HashMap();
+                            HashMap userInfo = new HashMap(); // use key value item to store
                             userInfo.put("name", name);
                             userInfo.put("specialization", specialization);
                             userInfo.put("hospital", whospital);
@@ -170,7 +170,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
 
                             if(resultUri !=null){
                                 final StorageReference filepath= FirebaseStorage.getInstance().getReference().child("profile picture").child(currentUserId);
-                                Bitmap bitmap = null;
+                                Bitmap bitmap = null; //digital image composed of a matrix of dots
                                 try {
                                     bitmap = MediaStore.Images.Media.getBitmap(getApplication().getContentResolver(), resultUri);
                                 }catch (IOException e){
@@ -204,7 +204,7 @@ public class DoctorRegistrationActivity extends AppCompatActivity {
                                                         @Override
                                                         public void onComplete(@NonNull Task task) {
                                                             if (task.isSuccessful()) {
-                                                                Toast.makeText(DoctorRegistrationActivity.this, "Reg successs", Toast.LENGTH_SHORT).show();
+                                                                Toast.makeText(DoctorRegistrationActivity.this, "Image upload success", Toast.LENGTH_SHORT).show();
                                                             } else {
                                                                 Toast.makeText(DoctorRegistrationActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                                             }
