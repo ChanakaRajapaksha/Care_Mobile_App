@@ -29,6 +29,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".TipsTricks"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".AddTips"
+            android:exported="true" />
+
         <activity
             android:name=".Home"
             android:exported="true">
@@ -70,6 +79,8 @@
         <activity
             android:name=".DoctorRegistrationActivity"
             android:exported="false" />
+
+
 
 
         <meta-data

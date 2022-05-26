@@ -143,6 +143,10 @@ public class CareUsersSignInActivity extends AppCompatActivity {
                                 Intent intent =  new Intent(CareUsersSignInActivity.this,CareAdminDocViewlRecyclerActivity.class);
                                 startActivity(intent);
                             }
+                            if(udType == 2){
+                                Intent intent =  new Intent(CareUsersSignInActivity.this,TipsTricks.class);
+                                startActivity(intent);
+                            }
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {

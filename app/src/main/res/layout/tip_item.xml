@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/gradient_background">
+
+        <ImageView
+            android:id="@+id/tip_img1"
+            android:layout_width="287dp"
+            android:layout_height="139dp"
+            android:layout_below="@+id/tip_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/tipimage" />
+
+        <TextView
+            android:id="@+id/tip_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/tip_title"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tip_description"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tip_img1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical"
+            android:text="@string/tip_description"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tip_description">
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/updatebutton"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:textAllCaps="false">
+            </Button>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="@string/deletebutton"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:textAllCaps="false">
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
