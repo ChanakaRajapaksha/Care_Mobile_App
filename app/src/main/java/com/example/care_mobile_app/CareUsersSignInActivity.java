@@ -143,6 +143,10 @@ public class CareUsersSignInActivity extends AppCompatActivity {
                                 Intent intent =  new Intent(CareUsersSignInActivity.this,CareAdminDocViewlRecyclerActivity.class);
                                 startActivity(intent);
                             }
+                            if(udType == 2){
+                                Intent intent =  new Intent(CareUsersSignInActivity.this,TipsTricks.class);
+                                startActivity(intent);
+                            }
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
@@ -152,7 +156,7 @@ public class CareUsersSignInActivity extends AppCompatActivity {
                     Toast.makeText(CareUsersSignInActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(CareUsersSignInActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CareUsersSignInActivity.this, "Login Failed" + task.getException(), Toast.LENGTH_SHORT).show();
                 }
             });
         }

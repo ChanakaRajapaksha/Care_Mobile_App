@@ -23,4 +23,9 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.care_mobile_app", appContext.getPackageName());
     }
+
+    public void addition_isCorrect(){
+        assertEquals(4,2+2);
+    }
+
 }

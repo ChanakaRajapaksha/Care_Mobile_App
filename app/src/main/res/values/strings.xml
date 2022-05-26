@@ -129,7 +129,11 @@
 <!--    <string name="health_gadget">health gadget</string>-->
 <!--    <string name="select_your_best_item">select your best item</string>-->
     <string name="homepnews">news</string>
-
+    <string name="tip_title">Tip Title</string>
+    <string name="tip_description">Tip Description</string>
+    <string name="tipimage">tipimage</string>
+    <string name="updatebutton">Update</string>
+    <string name="deletebutton">Delete</string>
 
 
 </resources>

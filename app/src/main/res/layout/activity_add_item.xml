@@ -253,7 +253,7 @@
                 android:background="@drawable/round"
                 android:inputType="textMultiLine"
                 android:lines="6"
-                android:gravity="center"
+                android:gravity="top"
                 android:overScrollMode="always"
                 android:scrollbars="vertical"
                 android:scrollbarStyle="insideInset"

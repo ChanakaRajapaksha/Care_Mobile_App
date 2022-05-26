@@ -18,7 +18,7 @@
             android:layout_width="20dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:background="@mipmap/white"/>
+            android:background="@mipmap/white" />
 
         <View
             android:id="@+id/second_line"
@@ -75,8 +75,8 @@
             android:id="@+id/logo"
             android:layout_width="318dp"
             android:layout_height="317dp"
-            android:background="@drawable/logo"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo" />
 
     </RelativeLayout>
 
